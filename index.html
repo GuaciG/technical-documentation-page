@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Technical Documentation Page</title>
+	<link rel="stylesheet" href="styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+	<link href="https://fonts.googleapis.com/css?family=Blinker|Comfortaa:700|Exo&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<script src="script.js"></script>
+</head>
+<body>
+	<header id="navbar" class="navigation">
+		<img src="https://s3.amazonaws.com/media.skillcrush.com/uploads/2013/12/22180923/jquery-logo-blue.png" alt="jquery logo">
+		<a class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+		<nav class="navbar-links" id="topbar">
+			<a href="#introduction" class="nav-link">Introduction</a>
+			<a href="#distribution" class="nav-link">Distribution</a>
+			<a href="#selectors" class="nav-link">Selectors</a>
+			<a href="#event-methods" class="nav-link">Event Methods</a>
+			<a href="#hide-and-show-method" class="nav-link">Hide and Show Method</a>
+			<a href="#draggable-and-droppable" class="nav-link">Draggable and Droppable</a>
+			<a href="#comments" class="nav-link">Comments</a>
+			<a href="#external-links" class="nav-link">External links</a>
+		</nav>			
+	</header>	
+
+	<main>
+		<section id="introduction" class="section">
+			<header>
+				<h2>Introduction</h2>
+			</header>
+			<article>
+				<p><strong>jQuery</strong> is an open source <strong>JavaScript library</strong> that simplifies the interactions between an HTML/CSS document, or more precisely the Document Object Model (DOM), and JavaScript.<br>One important thing to know is that jQuery is just a <strong>JavaScript library</strong>. All the power of jQuery is accessed via JavaScript, so having a strong grasp of JavaScript is essential for understanding, structuring, and debugging your code.</p>
+				<p>Some of the key points which supports the answer for why to use jQuery:</p>
+				<ul>
+					<li>It is incredibly popular, which is to say it has a large community of users and a healthy amount of contributors who participate as developers.</li>
+					<li>It normalizes the differences between web browsers so that you don’t have to.</li>
+					<li>Its repository of plugins is vast and has seen steady growth since jQuery’s release.</li>
+					<li>Its API is fully documented, including inline code examples, which in the world of JavaScript libraries is a luxury.</li>
+				</ul>
+			</article>
+		</section>
+		<hr>	
+			
+		<section id="distribution" class="section">
+			<header>
+			  	<h2>Distribution</h2>
+			</header>
+			<article>
+				<p>The jQuery library is typically distributed as a single JavaScript file that defines all its interfaces, including DOM, Events, and Ajax functions. It can be included within a Web page by linking to a local copy, or by linking to one of the many copies available from public servers. jQuery has a <a href="https://en.wikipedia.org/wiki/Content_delivery_network" title="content delivery network">content delivery network</a> (CDN) hosted by MaxCDN. Google in Google Hosted Libraries service and Microsoft host the library as well.</p>
+				<p>Example of linking a copy of the library locally (from the same server that hosts the Web page):</p>
+				<p class="line-code"><code>&lt;script src="jquery.js"&gt;&lt;/script&gt;</code></p>
+				<p>Example of linking a copy of the library from jQuery's public CDN:</p>
+				<div class="box-pre">
+					<pre><code>	
+&lt;script
+src="https://code.jquery.com/jquery-3.4.0.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="    
+crossorigin="anonymous"&gt;&lt;/script&gt;
+					</code></pre>        				
+				</div>	
+			</article>
+		</section>
+		<hr>
+
+		<section id="selectors" class="section">
+			<header>
+				<h2>Selectors</h2>
+			</header>
+			<article>
+				<p><strong>jQuery selectors</strong> are used to select the HTML element(s) and allows you to manipulate the HTML element(s) in a way we want. It selects the HTML elements on a variable parameter such as their <span>name, classes, id, types, attributes, attribute values, etc.</span> All selectors in jQuery are selected using a special sign i.e. <strong>dollar sign and parentheses</strong>:</p>
+				<p class="line-code"><code>$("selector-name")</code></p>
+				<ul>
+					<li><strong>Elements Selector:</strong></li>
+					<p>The elements selector selects the element on the basis of its name.</p>
+					<p><strong>Example:</strong> In this example, when the user clicks on button, the <code class="key">&lt;h1&gt;</code> element gets hidden.</p>
+					<div class="box-pre">
+						<pre><code>
+&lt;script type="text/javascript&gt;
+
+  $("button").click(function() {
+    $("h1").hide();
+  });
+
+&lt;/script&gt;
+						</code></pre>
+					</div>
+					<li><strong>Id Selector:</strong></li>
+					<p>The id selector selects the element on the basis of its id.</p>
+					<p><strong>Example:</strong> In this example, when the user double clicks on button, the element with <code class="key">id=“gfg”</code> gets hidden.</p>
+					<div class="box-pre">
+						<pre><code>
+&lt;script type="text/javascript"&gt;
+
+  $("button").dblclick(function() {
+    $("#gfg").hide();
+  });
+
+&lt;/script&gt;
+						</code></pre>
+					</div>
+					<li><strong>Class Selector:</strong></li>
+					<p>The class selector selects the element on the basis of its class.</p>
+					<p><strong>Example:</strong> In this example, when the user clicks on button, the element with <code class="key">class=“GFG”</code> gets hidden.</p>
+					<div class="box-pre">
+						<pre><code>
+&lt;script type="text/javascript"&gt;
+
+  $("button").click(function() {
+    $(".GFG").hide();
+  });
+
+  &lt;/script&gt;
+						</code></pre>
+					</div>	
+				</ul>
+			</article>
+		</section>
+		<hr>
+
+		<section id="event-methods" class="section">
+			<header>
+				<h2>Event Methods</h2>
+			</header>
+			<article>
+				<p><strong>Event</strong> refers to the <strong>actions</strong> performed by the site visitor during their interactivity with the website (or webpage).There can be various types of events such as:</p>
+				<ol>
+					<li>User clicks on the button.</li>
+					<li>User moves mouse pointer over an image.</li>
+					<li>User pressed any key from keyboard, etc.</li>
+				</ol>
+			</article>
+		</section>
+		<hr>
+
+		<section id="hide-and-show-method" class="section">
+			<header>
+				<h2>Hide and Show Method</h2>
+			</header>
+			<article>
+				<p><strong>jQuery methods</strong> allow us to quickly apply commonly used effects with a minimum configuration.</p>
+				<ul>
+					<li><strong>jQuery hide() :</strong> Hides the Syntax or the element of html that you want to hide.</li>
+					<p class="line-code"><code>$(selector).hide(speed, callback);</code></p>
+					<li><strong>jQuery show() :</strong> Shows the syntax or the element of html that you want the user to see.</li>
+					<p class="line-code"><code>$(selector).show(speed, callback);</code></p>
+				</ul>
+				<p>For both syntaxes above, the <span>speed</span> parameter is a optional parameter used for defining the speed of hiding and showing of the content of html. Durations can be specified either using one of the predefined string ‘slow’ or ‘fast’, or in a number of milliseconds, for greater precision; higher values indicate slower animations.The <span>callback</span> parameter is optional parameter used after the hiding and the showing function is completed.</p>
+			</article>	
+		</section>
+		<hr>
+
+		<section id="draggable-and-droppable" class="section">
+			<header>
+				<h2>Draggable and Droppable</h2>
+			</header>
+			<article>
+				<p><strong>jQuery UI</strong> is a mixture of methods and a set of user interface effects, widgets, interactions and themes which can be provided in the web page using jQuery methods. If you want to build up a powerful web application that includes various features such as <span>dragging, dropping, date picker, tooltips, etc.</span> then jQuery UI is a perfect choice to build up these effects.</p>
+				<h3>Draggable Method</h3>
+				<p>This method allows the elements to be <span>dragged</span> with the help of mouse. Using jQuery UI, we can make the DOM(Document Object Model) elements to drag anywhere within the view port.</p>
+				<ul>
+					<li>The <strong>draggable() method</strong> has two forms and the use of each form depends on the requirement. These are as follows :</li>
+					<p class="line-code"><code>$(selector, context).draggable (options);</code></p>
+					<p class="line-code"><code>$(selector, context).draggable ("action", [params]);</code></p>
+				</ul>
+				<h3>Droppable Method</h3>
+				<p>This method allows the elements to be <span>dropped</span> with the help of mouse. Using jQuery UI, we can make the DOM(Document Object Model) elements to drop anywhere within the view port on the specified target.</p>
+				<ul>
+					<li>The <strong>droppable() method</strong> has two forms and the use of each form depends on the requirement. These are as follows :</li>
+					<p class="line-code"><code>$(selector, context).droppable (options)</code></p>
+					<p class="line-code"><code>$(selector, context).droppable ("action", params)</code></p>
+				</ul>
+			</article>
+		</section>
+		<hr>
+
+		<section id="comments" class="section">
+			<header>
+				<h2>Comments</h2>
+			</header>
+			<article>
+				<p>jQuery comments are started with a double forward slash which tells the interpreter that the following text on the line is not to be processed as JavaScript. jQuery comments can be either inside a function or outside it makes no difference.</p>
+				<div class="box-pre">
+					<pre><code>
+function myFunction ( myVar, myVar2 ) {
+// Pay attention to spaces around
+// the brackets and curly brackets
+}
+					</code></pre>
+				</div>
+				<div class="box-pre">
+					<pre><code>
+// some prefere it like this
+function myFunction()
+{
+...
+}
+					</code></pre>
+				</div>
+				<p>Multi-line jQuery comments are enclosed within a combination of a forward slash and an asterisk like so:</p>
+				<p class="line-code"><code>/* comment */</code></p>		
+			</article>
+		</section>
+		<hr>
+
+		<section id="external-links" class="section">
+			<header>
+				<h2>External links</h2>
+			</header>
+			<article>
+				<p>External links for this Technical Documentation Page.</p>
+				<ul>
+					<li><a href="https://en.wikipedia.org/wiki/JQuery" title="wikipedia">JQuery Wikipedia</a></li>
+					<li><a href="https://www.geeksforgeeks.org/jquery-tutorials/" title="jquery-tutorials">JQuery Geeks for Geeks</a></li>
+					<li><a href="https://learn.jquery.com/" title="jquery">JQuery</a></li>
+				</ul>
+			</article>
+		</section>
+	</main>	
+	<footer>
+		<p>&#9400; 2019 Guaci Gutiérrez&#8194; &bull; &#8194;<a href="https://guacig.github.io/" target="_blank">Portfolio</a></p>
+	</footer>
+</body>
+</html>
